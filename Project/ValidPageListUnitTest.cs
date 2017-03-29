@@ -32,7 +32,11 @@ namespace Boissonnot.Framework.Tests.UnitTester.Selenium
             this._driver = new ChromeDriver(service, options);
             this._driver.Manage().Window.Maximize();
 
-            this._document = XDocument.Load(Assembly.GetExecutingAssembly().GetManifestResourceStream("Boissonnot.Framework.Tests.UnitTester.Selenium.TestPageList.xml"));
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.XML_PATH))
+                this._document = XDocument.Load(Properties.Settings.Default.XML_PATH);
+            else
+                this._document = XDocument.Load(Assembly.GetExecutingAssembly().GetManifestResourceStream("Boissonnot.Framework.Tests.UnitTester.Selenium.TestPageList.xml"));
+
             Motor.Instance.Configuration.Load(this._document);
         }
 
