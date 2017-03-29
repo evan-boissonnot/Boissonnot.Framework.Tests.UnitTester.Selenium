@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace FDC.Sites.Web.UnitTest.Selenium.Configuration
+namespace Boissonnot.Framework.Tests.UnitTester.Selenium.Configuration
 {
     public class DefaultConfiguration : IConfiguration
     {

@@ -1,5 +1,5 @@
-﻿using FDC.Sites.Web.UnitTest.Selenium.Configuration;
-using FDC.Sites.Web.UnitTest.Selenium.Specifics.Actions;
+﻿using Boissonnot.Framework.Tests.UnitTester.Selenium.Configuration;
+using Boissonnot.Framework.Tests.UnitTester.Selenium.Specifics.Actions;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace FDC.Sites.Web.UnitTest.Selenium.Specifics.Asserts
+namespace Boissonnot.Framework.Tests.UnitTester.Selenium.Specifics.Asserts
 {
     public abstract class AssertItem : IAssert
     {

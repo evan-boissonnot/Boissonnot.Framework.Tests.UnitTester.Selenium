@@ -1,4 +1,4 @@
-﻿using FDC.Sites.Web.UnitTest.Selenium.Specifics.Asserts;
+﻿using Boissonnot.Framework.Tests.UnitTester.Selenium.Specifics.Asserts;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace FDC.Sites.Web.UnitTest.Selenium.Specifics
+namespace Boissonnot.Framework.Tests.UnitTester.Selenium.Specifics
 {
     public class AssertScheduler
     {

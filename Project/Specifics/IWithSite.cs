@@ -1,11 +1,11 @@
-﻿using FDC.Sites.Web.UnitTest.Selenium.Configuration;
+﻿using Boissonnot.Framework.Tests.UnitTester.Selenium.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FDC.Sites.Web.UnitTest.Selenium.Specifics
+namespace Boissonnot.Framework.Tests.UnitTester.Selenium.Specifics
 {
     public interface IWithSite
     {

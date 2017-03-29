@@ -1,4 +1,4 @@
-﻿using FDC.Sites.Web.UnitTest.Selenium.Configuration;
+﻿using Boissonnot.Framework.Tests.UnitTester.Selenium.Configuration;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace FDC.Sites.Web.UnitTest.Selenium.Specifics.Actions
+namespace Boissonnot.Framework.Tests.UnitTester.Selenium.Specifics.Actions
 {
     public class SetAction : BaseAction
     {

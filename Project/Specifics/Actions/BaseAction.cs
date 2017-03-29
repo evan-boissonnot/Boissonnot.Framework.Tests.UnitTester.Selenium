@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using FDC.Sites.Web.UnitTest.Selenium.Configuration;
+using Boissonnot.Framework.Tests.UnitTester.Selenium.Configuration;
 
-namespace FDC.Sites.Web.UnitTest.Selenium.Specifics.Actions
+namespace Boissonnot.Framework.Tests.UnitTester.Selenium.Specifics.Actions
 {
     public class BaseAction : IAction
     {

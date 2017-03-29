@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FDC.Sites.Web.UnitTest.Selenium
+namespace Boissonnot.Framework.Tests.UnitTester.Selenium
 {
     public class Motor
     {

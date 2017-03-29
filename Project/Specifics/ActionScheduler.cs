@@ -1,4 +1,4 @@
-﻿using FDC.Sites.Web.UnitTest.Selenium.Specifics.Actions;
+﻿using Boissonnot.Framework.Tests.UnitTester.Selenium.Specifics.Actions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace FDC.Sites.Web.UnitTest.Selenium.Specifics
+namespace Boissonnot.Framework.Tests.UnitTester.Selenium.Specifics
 {
     public class ActionScheduler
     {
@@ -22,7 +22,7 @@ namespace FDC.Sites.Web.UnitTest.Selenium.Specifics
 
             if (xmlElement != null)
             {
-                string typeName = string.Format("FDC.Sites.Web.UnitTest.Selenium.Specifics.Actions.{0}Action", xmlElement.Name);
+                string typeName = string.Format("Boissonnot.Framework.Tests.UnitTester.Selenium.Specifics.Actions.{0}Action", xmlElement.Name);
                 Type currentType = Type.GetType(typeName, false, true);
 
                 realAction = (IAction)Activator.CreateInstance(currentType);

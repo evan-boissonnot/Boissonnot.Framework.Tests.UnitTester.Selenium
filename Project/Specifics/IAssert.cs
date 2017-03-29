@@ -1,8 +1,8 @@
-﻿using FDC.Sites.Web.UnitTest.Selenium.Configuration;
+﻿using Boissonnot.Framework.Tests.UnitTester.Selenium.Configuration;
 using OpenQA.Selenium;
 using System.Xml.Linq;
 
-namespace FDC.Sites.Web.UnitTest.Selenium.Specifics
+namespace Boissonnot.Framework.Tests.UnitTester.Selenium.Specifics
 {
     public interface IAssert : IWithSite
     {

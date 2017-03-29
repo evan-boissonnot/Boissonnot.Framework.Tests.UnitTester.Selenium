@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace FDC.Sites.Web.UnitTest.Selenium.Specifics.Asserts
+namespace Boissonnot.Framework.Tests.UnitTester.Selenium.Specifics.Asserts
 {
     public class ContentAssertItem : AssertItem
     {

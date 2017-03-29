@@ -4,10 +4,10 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System.Xml.Linq;
 using System.Reflection;
-using FDC.Sites.Web.UnitTest.Selenium.Specifics;
-using FDC.Sites.Web.UnitTest.Selenium.Configuration;
+using Boissonnot.Framework.Tests.UnitTester.Selenium.Specifics;
+using Boissonnot.Framework.Tests.UnitTester.Selenium.Configuration;
 
-namespace FDC.Sites.Web.UnitTest.Selenium
+namespace Boissonnot.Framework.Tests.UnitTester.Selenium
 {
     [TestClass]
     public class ValidPageListUnitTest
@@ -32,7 +32,7 @@ namespace FDC.Sites.Web.UnitTest.Selenium
             this._driver = new ChromeDriver(service, options);
             this._driver.Manage().Window.Maximize();
 
-            this._document = XDocument.Load(Assembly.GetExecutingAssembly().GetManifestResourceStream("FDC.Sites.Web.UnitTest.Selenium.TestPageList.xml"));
+            this._document = XDocument.Load(Assembly.GetExecutingAssembly().GetManifestResourceStream("Boissonnot.Framework.Tests.UnitTester.Selenium.TestPageList.xml"));
             Motor.Instance.Configuration.Load(this._document);
         }
 
