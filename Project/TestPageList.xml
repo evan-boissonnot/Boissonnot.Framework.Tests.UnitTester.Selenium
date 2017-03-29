@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages>
+  <!-- Noeud non utilisé -->
+  <configuration>
+    <sites>
+      <site id='1' url='http://fdc.portail.netil.dev/'></site>
+      <site id='2' url='http://fdc.bar-tabac-pmu.netil.dev/'></site>
+      <site id='3' url='http://www.bar-brasserie.fr/'></site>
+      <site id='4' url='http://www.boucherie-charcuterie-traiteur.fr/'></site>
+      <site id='5' url='http://www.boulangerie-patisserie-salon-de-the.fr/'></site>
+      <site id='6' url='http://www.boutiques-et-magasins.fr/'></site>
+      <site id='7' url='http://www.bureaux-locaux-entrepots.fr/'></site>
+      <site id='8' url='http://www.coiffure-esthetique-parfumerie.fr/'></site>
+      <site id='9' url='http://www.commerce-alimentation.fr/'></site>
+      <site id='10' url='http://www.creperie-pizzeria.fr/'></site>
+      <site id='11' url='http://www.entreprise-services.fr/'></site>
+      <site id='12' url='http://www.my-entreprise-du-batiment.fr/'></site>
+      <site id='13' url='http://www.hotel-bureau.fr/'></site>
+      <site id='14' url='http://www.hotel-restaurant.fr/'></site>
+      <site id='16' url='http://www.vente-restaurants.fr/'></site>
+      <site id='17' url='http://www.restauration-rapide.fr/'></site>
+      <site id='19' url='http://www.tabac-loto-presse.fr/'></site>
+      <site id='20' url='http://www.cercle-my-forum.fr/'></site>
+      <site id='22' url='http://fdc.radiopetrin.netil.dev/'></site>
+    </sites>
+  </configuration>
+  <page site-id="1" url=''>
+    <asserts>
+      <assert>
+        <title>my-Forum - Services vente de fonds de commerce, d'entreprises, de locaux et murs commerciaux</title>
+      </assert>
+      <assert>
+        <before>
+          <actions>
+            <action order='1'>
+              <goto site-id="1" url='offres-et-tarifs'></goto>
+            </action>
+            <action order='2'>
+              <click>
+                <input findby-xpath="(//p[text()='(40 €/annonce)']/..)[1]"></input>
+              </click>
+            </action>
+          </actions>
+        </before>
+        <content>
+          <control type="h1">Vendez votre affaire</control>
+        </content>
+      </assert>
+      <assert>
+        <before>
+          <actions>
+            <action order='1'>
+              <goto site-id="1" url='mon-compte/mes-alertes'></goto>
+            </action>
+            <action order='2'>
+              <set>
+                <input id='UserLogin_Email' content='evan@boissonnot.fr'></input>
+                <input id='UserLogin_Password' content='Test3*'></input>
+              </set>
+            </action>
+            <action order='3'>
+              <click>
+                <input findby-xpath="(//form//button//span[text()='Se connecter']/..)[1]"></input>
+              </click>
+            </action>
+          </actions>
+        </before>
+        <content>
+          <control type="h2">Mes alertes</control>
+        </content>
+      </assert>
+      <assert>
+        <before>
+          <actions>
+            <action order='1'>
+              <click>
+                <input findby-xpath="(//button[@id='btn-account'])[1]"></input>
+              </click>
+            </action>
+            <action order='2'>
+              <click>
+                <input findby-xpath="(//a[@class='btn-deconnexion'])[1]"></input>
+              </click>
+            </action>
+          </actions>
+        </before>
+        <content>
+          <control type="h1">Mon compte</control>
+        </content>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="2" url=''>
+    <asserts>
+      <assert>
+        <title>Bar Tabac PMU - Acheter et vendre votre bar tabac pmu - trouver du materiel et des offres d'emploi - bar-tabac-pmu.fr</title>
+      </assert>
+      <assert>
+        <before>
+          <actions>
+            <action order='1'>
+              <goto url='offres-et-tarifs'></goto>
+            </action>
+            <action order='2'>
+              <click>
+                <input findby-xpath="(//p[text()='(40 €/annonce)']/..)[1]"></input>
+              </click>
+            </action>
+          </actions>
+        </before>
+        <content>
+          <control type="h1">Connectez-vous ou créez votre compte pour déposer l'annonce de vente de votre café - bar - tabac - pmu</control>
+        </content>
+      </assert>
+      <assert>
+        <before>
+          <actions>
+            <action order='1'>
+              <goto url='achat-annonces-0-False-0-0-0-tous'></goto>
+            </action>
+          </actions>
+        </before>
+        <content>
+          <control type="h1">Bar Tabac PMU -</control>
+        </content>
+      </assert>
+      <assert>
+        <before>
+          <actions>
+            <action order='1'>
+              <goto url='achat-annonces-0-False-0-0-0-tous'></goto>
+            </action>
+            <action order='2'>
+              <click>
+                <input findby-xpath="(//a[@class='btn-alert small'])[1]"></input>
+              </click>
+            </action>
+            <action order='3'>
+              <set>
+                <input id='UserLogin_Email' content='evan@boissonnot.fr'></input>
+                <input id='UserLogin_Password' content='Test3*'></input>
+              </set>
+            </action>
+            <action order='4'>
+              <click>
+                <input findby-xpath="(//form//button//span[text()='Se connecter']/..)[1]"></input>
+              </click>
+            </action>
+            <action order='5'>
+              <click>
+                <input findby-xpath="(//form[@id='frmSaveAlert']//button//span[text()='Enregistrer']/..)[1]"></input>
+              </click>
+            </action>
+          </actions>
+        </before>
+        <content>
+          <control type="h2">Mes alertes</control>
+        </content>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="3" url=''>
+    <asserts>
+      <before>
+        <actions>
+          <action order='1'>
+            <click>
+              <input findby-xpath="(//button[@id='btn-account'])[1]"></input>
+            </click>
+          </action>
+          <action order='2'>
+            <click>
+              <input findby-xpath="(//a[@class='btn-deconnexion'])[1]"></input>
+            </click>
+          </action>
+        </actions>
+      </before>
+      <assert>
+        <title>Bar Brasserie - Acheter et vendre votre bar brasserie - trouver du materiel et des offres d'emploi - bar-brasserie.fr</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="4" url=''>
+    <asserts>
+      <assert>
+        <title>Boucherie Charcuterie Traiteur - Acheter et vendre votre boucherie charcuterie traiteur - trouver du materiel et des offres d'emploi - boucherie-charcuterie-traiteur.fr</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="5" url=''>
+    <asserts>
+      <assert>
+        <title>Boulangerie Pâtisserie - Acheter et vendre votre boulangerie pâtisserie - trouver du materiel et des offres d'emploi - boulangerie-patisserie-salon-de-the.fr</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="6" url=''>
+    <asserts>
+      <assert>
+        <title>Boutique et Magasin - Acheter et vendre votre boutique et magasin - trouver du materiel et des offres d'emploi - boutiques-et-magasins.fr</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="7" url=''>
+    <asserts>
+      <assert>
+        <title>Bureau Local Entrepôt - Acheter et vendre votre bureau local entrepôt - trouver du materiel et des offres d'emploi - bureaux-locaux-entrepots.fr</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="8" url=''>
+    <asserts>
+      <assert>
+        <title>Salon de Coiffure Esthétique Parfumerie - Acheter et vendre votre salon de coiffure esthétique parfumerie - trouver du materiel et des offres d'emploi - coiffure-esthetique-parfumerie.fr</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="9" url=''>
+    <asserts>
+      <assert>
+        <title>Commerce Alimentaire - Acheter et vendre votre commerce alimentaire - trouver du materiel et des offres d'emploi - commerce-alimentation.fr</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="10" url=''>
+    <asserts>
+      <assert>
+        <title>Crêperie Pizzeria - Acheter et vendre votre crêperie pizzeria - trouver du materiel et des offres d'emploi - creperie-pizzeria.fr</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="11" url=''>
+    <asserts>
+      <assert>
+        <title>Entreprise de Services - Acheter et vendre votre entreprise de services - trouver du materiel et des offres d'emploi - entreprise-services.fr</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="12" url=''>
+    <asserts>
+      <assert>
+        <title>Entreprise du Bâtiment - Acheter et vendre votre entreprise du bâtiment - trouver du materiel et des offres d'emploi - my-entreprise-du-batiment.fr</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="13" url=''>
+    <asserts>
+      <assert>
+        <title>Hôtel-Bureau - Acheter et vendre votre hôtel-bureau - trouver du materiel et des offres d'emploi - hotel-bureau.fr</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="14" url=''>
+    <asserts>
+      <assert>
+        <title>Hôtel Restaurant - Acheter et vendre votre hôtel restaurant - trouver du materiel et des offres d'emploi - hotel-restaurant.fr</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="16" url=''>
+    <asserts>
+      <assert>
+        <title>Restaurant - Acheter et vendre votre restaurant - trouver du materiel et des offres d'emploi - my-restaurant.fr</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="17" url=''>
+    <asserts>
+      <assert>
+        <title>Restauration Rapide - Acheter et vendre votre restauration rapide - trouver du materiel et des offres d'emploi - my-restaurant-rapide.fr</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="19" url=''>
+    <asserts>
+      <assert>
+        <title>Tabac Loto Presse - Acheter et vendre votre tabac loto presse - trouver du materiel et des offres d'emploi - tabac-loto-presse.fr</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="22" url=''>
+    <asserts>
+      <assert>
+        <title>Radio Pétrin - Acheter et vendre votre Boulangerie Pâtisserie - trouver du materiel et des offres d'emploi - radio-perin.fr</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="22" url='offre-emploi/consulter-offres-emplois-0-False-0-0-0-tous'>
+    <asserts>
+      <assert>
+        <count expected="0">
+          <control findby-xpath="//span[@class='right alerts-price']"></control>
+        </count>
+      </assert>
+      <assert>
+        <before>
+          <actions>
+            <action order='1'>
+              <click>
+                <input findby-xpath="(//button[@id='btn-account'])[1]"></input>
+              </click>
+            </action>
+            <action order='2'>
+              <set>
+                <input id='account-login' content='evan@boissonnot.fr'></input>
+                <input id='account-password' content='Test3*'></input>
+              </set>
+            </action>
+            <action order='3'>
+              <click>
+                <input findby-xpath="(//form//button[@class='btn-block medium'])[1]"></input>
+              </click>
+            </action>
+          </actions>
+        </before>
+        <count expected="0">
+          <control findby-xpath="//span[@class='right alerts-price']"></control>
+        </count>
+        <after>
+          <actions>
+            <action order='1'>
+              <click>
+                <input findby-xpath="(//button[@id='btn-account'])[1]"></input>
+              </click>
+            </action>
+            <action order='2'>
+              <click>
+                <input findby-xpath="(//a[@class='btn-deconnexion'])[1]"></input>
+              </click>
+            </action>
+          </actions>
+        </after>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="1" url='achat'>
+    <asserts>
+      <assert>
+        <title>Achetez votre affaire sur votre secteur d'activité préféré</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="2" url='achat'>
+    <asserts>
+      <assert>
+        <title>Trouvez facilement un café - bar - tabac - PMU à vendre</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="3" url='achat'>
+    <asserts>
+      <assert>
+        <title>Trouvez facilement un café - bar - brasserie - restaurant à vendre</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="4" url='achat'>
+    <asserts>
+      <assert>
+        <title>Trouvez facilement une boucherie - charcuterie - traiteur - triperie - rôtisserie à vendre</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="5" url='achat'>
+    <asserts>
+      <assert>
+        <title>Trouvez facilement une boulangerie - pâtisserie - salon de thé - dépôt de pain - terminal de cuisson - point chaud à vendre</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="6" url='achat'>
+    <asserts>
+      <assert>
+        <title>Trouvez facilement une boutique, un magasin, corner, emplacement N°1 à vendre</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="7" url='achat'>
+    <asserts>
+      <assert>
+        <title>Trouvez facilement des bureaux, locaux, entrepôts, hangars à vendre</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="8" url='achat'>
+    <asserts>
+      <assert>
+        <title>Trouvez facilement un salon de coiffure, d'esthétique ou une parfumerie à vendre</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="9" url='achat'>
+    <asserts>
+      <assert>
+        <title>Trouvez facilement une supérette, alimentation générale, poissonnerie, primeur, crèmerie, épicerie à vendre</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="10" url='achat'>
+    <asserts>
+      <assert>
+        <title>Trouvez facilement une crêperie, une pizzeria à vendre</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="11" url='achat'>
+    <asserts>
+      <assert>
+        <title>Trouvez facilement une agence, pharmacie, entreprise de services, un cabinet, garage à vendre</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="12" url='achat'>
+    <asserts>
+      <assert>
+        <title>Trouvez facilement une entreprise du bâtiment, électricité, plomberie, menuiserie, maçonnerie à vendre</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="13" url='achat'>
+    <asserts>
+      <assert>
+        <title>Trouvez facilement un hôtel bureau à vendre</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="14" url='achat'>
+    <asserts>
+      <assert>
+        <title>Trouvez facilement un hôtel restaurant à vendre</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="16" url='achat'>
+    <asserts>
+      <assert>
+        <title>Trouvez facilement un restaurant à vendre</title>
+      </assert>
+    </asserts>
+  </page>
+  <page usite-id="17" rl='achat'>
+    <asserts>
+      <assert>
+        <title>Trouvez facilement un restaurant rapide, snack et food truck à vendre</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="19" url='achat'>
+    <asserts>
+      <assert>
+        <title>Trouvez facilement un tabac loto presse à vendre</title>
+      </assert>
+    </asserts>
+  </page>
+  <page site-id="22" url='achat'>
+    <asserts>
+      <assert>
+        <title>Trouvez facilement une boulangerie - pâtisserie - salon de thé - dépôt de pain - terminal de cuisson - point chaud à vendre</title>
+      </assert>
+    </asserts>
+  </page>
+</pages>
