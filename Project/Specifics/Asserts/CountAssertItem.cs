@@ -22,25 +22,35 @@ namespace Boissonnot.Framework.Tests.UnitTester.Selenium.Specifics.Asserts
         {
             const string FINDBY = "findby-";
             XElement countElement = this.Item.Element("count");
-            int expected = int.Parse(countElement.Attribute("expected").Value);
-            int nbItems = 0;      
+            XAttribute expectedAttribute = countElement.Attribute("expected");
+            XAttribute moreThanAttribute = countElement.Attribute("more-than");
+            XAttribute findbyAttribute = countElement.Element("control").Attribute(FINDBY + "xpath");
 
-            XAttribute attribute = countElement.Element("control").Attribute(FINDBY + "xpath");
-            IReadOnlyCollection<IWebElement> webElementList = null;
-
-            if (attribute != null)
+            if (findbyAttribute != null)
             {
+                int nbItems = 0;
+                IReadOnlyCollection<IWebElement> webElementList = null;
+
                 try
                 {
-                    webElementList = context.Driver.FindElements(By.XPath(attribute.Value));
+                    webElementList = context.Driver.FindElements(By.XPath(findbyAttribute.Value));
                     nbItems = webElementList.Count;
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     nbItems = 0;
                 }
 
-                Assert.IsTrue(expected == nbItems, "Le nombre d'éléments attendu est de : " + expected + ", nous en avons : " + nbItems);
+                if (expectedAttribute != null)
+                {
+                    int expected = int.Parse(expectedAttribute.Value);
+                    Assert.IsTrue(expected == nbItems, "Le nombre d'éléments attendu est de : " + expected + ", nous en avons : " + nbItems);
+                }
+                else if (moreThanAttribute != null)
+                {
+                    int expected = int.Parse(moreThanAttribute.Value);
+                    Assert.IsTrue(expected < nbItems, "Le nombre d'éléments attendu doit être supérieur à : " + expected + ", nous en avons : " + nbItems);
+                }
             }
         }
         #endregion
